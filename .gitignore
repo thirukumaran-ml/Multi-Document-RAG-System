@@ -1,0 +1,27 @@
+# Virtual Environment
+
+testenv/
+venv/
+
+# Environment Variables
+
+.env
+
+# Vector Database
+
+vectorstore/
+
+# Python Cache
+
+**pycache**/
+*.pyc
+
+# VS Code
+
+.vscode/
+
+# Streamlit Secrets
+
+.streamlit/
+
+data/

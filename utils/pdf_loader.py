@@ -1,0 +1,30 @@
+from pypdf import PdfReader
+
+
+def extract_text_from_pdf(pdf_path):
+    """
+    Extract text from a PDF file.
+
+    Args:
+        pdf_path (str): Path to PDF
+
+    Returns:
+        str: Extracted text
+    """
+
+    text = ""
+
+    try:
+        reader = PdfReader(pdf_path)
+
+        for page in reader.pages:
+            page_text = page.extract_text()
+
+            if page_text:
+                text += page_text + "\n"
+
+        return text
+
+    except Exception as e:
+        print(f"Error reading PDF: {e}")
+        return None
